@@ -3,32 +3,33 @@ pipeline{
 	stages {
 		stage ('Build') {
 			steps {
-				sh 'sleep 10'; echo "this is build stage"
+				sh 'sleep 5'; echo "this is build stage"
+			}
 		}
-	}
 		stage ('test') {
 			steps {
 				sh '''
-					sleep 10
+					sleep 5
 					echo "this is test stage"
+					
 				'''
+			}
 		}
-	}
 		stage ('deploy') {
 			steps {
 				sh '''
-					sleep 10
-					echo "this is test stage"
+					sleep 5
+					echo "this is deploy stage"
 				'''
+			}
 		}
-	}
-		stage ('my stage') {
+		stage ('my-stage') {
 			steps {
 				sh '''
-					sleep 10
-					echo "this is test stage"
+					sleep 5
+					echo "this is my-stage stage"
 				'''
-		
+			}
 		}
 	}
 }
